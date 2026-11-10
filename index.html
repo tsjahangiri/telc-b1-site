@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TELC B1 Übungen – Lesen, Sprachbausteine &amp; Hören</title>
+<link rel="stylesheet" href="css/styles.css?v=8">
+</head>
+<body>
+<header class="topbar">
+  <button id="menuBtn" class="icon-btn" aria-label="Übersicht öffnen" title="Übersicht">☰</button>
+  <div class="brand">TELC B1</div>
+  <div class="area-tabs" role="tablist" aria-label="Prüfungsteil">
+    <button class="area-tab" role="tab" data-area="ls"><span class="t-long">Lesen &amp; Sprachbausteine</span><span class="t-short">Lesen &amp; SB</span></button>
+    <button class="area-tab" role="tab" data-area="hv"><span class="t-long">Hörverstehen</span><span class="t-short">Hören</span></button>
+  </div>
+  <div class="position" id="position" aria-live="polite"></div>
+</header>
+
+<div class="layout">
+  <nav id="overview" class="overview" aria-label="Übersicht der Übungen">
+    <div class="ov-head">
+      <h2>Übersicht</h2>
+      <button id="closeOverview" class="icon-btn only-mobile" aria-label="Übersicht schließen">✕</button>
+    </div>
+    <div class="ov-controls">
+      <label class="toggle"><input type="checkbox" id="showDupes"> Doppelte Übungen anzeigen (alle <span id="dupeCount">148</span> wie im PDF)</label>
+      <label class="filter">Teil:
+        <select id="typeFilter">
+          <option value="all">Alle Teile</option>
+          <option value="lesen1" data-area="ls">Leseverstehen 1</option>
+          <option value="lesen2" data-area="ls">Leseverstehen 2</option>
+          <option value="lesen3" data-area="ls">Leseverstehen 3</option>
+          <option value="sprach1" data-area="ls">Sprachbausteine 1</option>
+          <option value="sprach2" data-area="ls">Sprachbausteine 2</option>
+          <option value="hoeren1" data-area="hv">Hörverstehen 1</option>
+          <option value="hoeren2" data-area="hv">Hörverstehen 2</option>
+          <option value="hoeren3" data-area="hv">Hörverstehen 3</option>
+        </select>
+      </label>
+      <div class="ov-stats" id="ovStats"></div>
+    </div>
+    <div id="ovList" class="ov-list"></div>
+    <div class="ov-foot">
+      <button id="resetAll" class="link-btn">Gesamten Fortschritt löschen</button>
+    </div>
+  </nav>
+
+  <main id="main" class="main" tabindex="-1">
+    <div id="exercise"></div>
+  </main>
+</div>
+
+<footer class="navbar">
+  <button id="prevBtn" class="btn">← Zurück</button>
+  <div class="nav-mid">
+    <button id="checkBtn" class="btn primary">Antworten prüfen</button>
+    <button id="solutionBtn" class="btn">Lösung zeigen</button>
+    <button id="resetBtn" class="btn">Zurücksetzen</button>
+  </div>
+  <button id="nextBtn" class="btn">Weiter →</button>
+</footer>
+
+<noscript><p class="noscript">Bitte JavaScript aktivieren, um die Übungen zu benutzen.</p></noscript>
+<script src="data/exercises.js?v=8"></script>
+<script src="js/app.js?v=8"></script>
+</body>
+</html>
